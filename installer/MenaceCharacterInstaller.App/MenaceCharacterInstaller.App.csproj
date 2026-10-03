@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+ <PropertyGroup>
+  <OutputType>WinExe</OutputType><TargetFramework>net10.0-windows</TargetFramework><UseWPF>true</UseWPF>
+  <AssemblyName>MenaceCharacterInstaller</AssemblyName><Version>0.3.1</Version>
+  <ApplicationIcon>../../src/MenacePackStudio.App/Assets/studio.ico</ApplicationIcon>
+ </PropertyGroup>
+ <ItemGroup><ProjectReference Include="../MenaceCharacterInstaller.Core/MenaceCharacterInstaller.Core.csproj" /></ItemGroup>
+ <ItemGroup><EmbeddedResource Include="../content/**/*" LogicalName="InstallerContent/%(RecursiveDir)%(Filename)%(Extension)" /></ItemGroup>
+</Project>

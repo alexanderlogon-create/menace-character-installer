@@ -1,0 +1,2 @@
+# Preserve the release snapshot's file bytes, including embedded resource text.
+* -text

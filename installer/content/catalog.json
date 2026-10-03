@@ -1,0 +1,522 @@
+{
+  "schemaVersion": 1,
+  "name": "Waybackers",
+  "version": "1.0.2-installer.1",
+  "module": "msl_d387e511b2a645b0a8de4a122d3abeaa",
+  "gameAssemblySha256": "877622DD02ED79F6A3A37580B5CD9BE12E29012BBD6F15A9C80CF917AF1373DB",
+  "testedGame": "MENACE 0.7.15+21883 / Unity 6000.0.82f1",
+  "dependencies": ["Jiangyu >= 1.4.7", "All Leaders Pickable"],
+  "shared": {
+    "path": "packages/shared.zip",
+    "sha256": "1cb631900da9b89fad574cb4ec6dd7739080a54d60ae20efba221eb0139740f0",
+    "size": 9739675
+  },
+  "characters": [
+    {
+      "id": "0d0b9a07-a238-4b52-8344-558be8f4c58e",
+      "leaderId": "squad_leader.msl_0d0b9a07a2384b528344558be8f4c58e",
+      "name": "Crow",
+      "fullName": "Elias Crow",
+      "role": "Infantry · Wayback Frontier Watch",
+      "description": "A hard-bitten settler turned rifleman from the Wayback colonial frontier. Elias Crow is one of the volunteer defenders who patrol the badlands, convoy routes, and half-abandoned outposts beyond formal security lines. He is accustomed to poor supply, harsh weather, and long periods of isolation, making him dependable in drawn-out operations where discipline matters more than glory.\n\nThe decentralized Frontier Watch guards remote settlements, routes and outposts. Patrols scout, warn and delay enemies until reinforcements arrive. Veterans endure days unsupported through local knowledge, improvised fieldcraft and disciplined marksmanship.",
+      "portrait": "portraits/0d0b9a07a2384b528344558be8f4c58e.png",
+      "attributes": {
+        "agility": 62,
+        "weapon_skill": 57,
+        "valour": 68,
+        "toughness": 65,
+        "vitality": 63,
+        "precision": 72,
+        "positioning": 76
+      },
+      "package": {
+        "path": "packages/0d0b9a07a2384b528344558be8f4c58e.zip",
+        "sha256": "e7c245be5de43a70a6a309a964eb1d87af6595c615d88049d060d64bdd24859e",
+        "size": 12567864
+      }
+    },
+    {
+      "id": "5d12eeb8-988d-42d5-b0e2-911259bc5ada",
+      "leaderId": "pilot.msl_5d12eeb8988d42d5b0e2911259bc5ada",
+      "name": "Lucky",
+      "fullName": "Lucky Mercer",
+      "role": "Vehicle crew · Wilds Haulage & Freight",
+      "description": "Lucky Mercer spent most of his working life driving industrial haulers for Wilds Haulage & Freight, a civilian transport company serving remote colonies, mines, and frontier settlements. Years of moving oversized cargo across bad roads made him an exceptional driver, even if his combat experience remains limited.\nWhen freight work became scarce, Mercer turned to mercenary contracts as a vehicle pilot. \r\n\r\nCheerful and relentlessly optimistic, he treats incoming fire, breakdowns, and impossible routes as temporary problems—usually convinced that enough throttle and a little luck will see him through.",
+      "portrait": "portraits/5d12eeb8988d42d5b0e2911259bc5ada.png",
+      "attributes": {
+        "agility": 74,
+        "weapon_skill": 38,
+        "valour": 63,
+        "toughness": 49,
+        "vitality": 57,
+        "precision": 43,
+        "positioning": 78
+      },
+      "package": {
+        "path": "packages/5d12eeb8988d42d5b0e2911259bc5ada.zip",
+        "sha256": "3fc550bd32929ead8cbdf6b905f428986d1da433d4a8afc90e22080a31af110f",
+        "size": 12524619
+      }
+    },
+    {
+      "id": "7769d2f6-ea6a-441b-989f-ab2c862b0b10",
+      "leaderId": "squad_leader.msl_7769d2f6ea6a441b989fab2c862b0b10",
+      "name": "Ash",
+      "fullName": "Ashly Rourke",
+      "role": "Infantry · Ashwake Vigil",
+      "description": "Ashly Rourke was a colonial settler until pirates raided her home and killed her family while she was away. She returned to ruins, gathered the surviving settlers, and led them on a relentless hunt, personally killing six of the raiders. \r\n\r\nShe has been chosen a leader of Ashwake Vigil, a loose band of survivors, settlers, and frontier vigilantes united by loss to track raiders, strike from concealment, and show pirates little mercy. With nothing left to return to, Ashly is seeking any outfit she can join to keep hunting pirates wherever they appear.",
+      "portrait": "portraits/7769d2f6ea6a441b989fab2c862b0b10.png",
+      "attributes": {
+        "agility": 56,
+        "weapon_skill": 49,
+        "valour": 90,
+        "toughness": 52,
+        "vitality": 46,
+        "precision": 8,
+        "positioning": 54
+      },
+      "package": {
+        "path": "packages/7769d2f6ea6a441b989fab2c862b0b10.zip",
+        "sha256": "1f4245ba1231b32dd68b7eb002d807b85beb87687877757b4e9242473603fe45",
+        "size": 11904595
+      }
+    },
+    {
+      "id": "d27feca8-243a-4c10-a952-deb3fc3fb52f",
+      "leaderId": "squad_leader.msl_d27feca8243a4c10a952deb3fc3fb52f",
+      "name": "Bulk",
+      "fullName": "Mason Harker",
+      "role": "Infantry · Sightline Tactical Group",
+      "description": "Mason “Bulk” Harker is a veteran mercenary infantryman with Sightline Tactical Group, specializing in heavy weapons and sustained fire. Strong, steady, and hard to put down, he trades speed for armor, endurance, and the ability to keep his big gun working.\r\n\r\nOff duty, Harker is easygoing and relentlessly cheerful. He jokes about his weight as often as everyone else does, usually insisting it is “extra ballistic protection.” In combat, that humor never quite disappears—especially when he is carrying something with a belt feed.",
+      "portrait": "portraits/d27feca8243a4c10a952deb3fc3fb52f.png",
+      "attributes": {
+        "agility": 45,
+        "weapon_skill": 64,
+        "valour": 72,
+        "toughness": 82,
+        "vitality": 78,
+        "precision": 35,
+        "positioning": 50
+      },
+      "package": {
+        "path": "packages/d27feca8243a4c10a952deb3fc3fb52f.zip",
+        "sha256": "fd6a2dc4b5d8d24c09e17ca6cbe91a2d6125d4c56bd9861804372c52e3d1139b",
+        "size": 11553247
+      }
+    },
+    {
+      "id": "8df4bf74-230d-40bc-ba21-b87d364f57d8",
+      "leaderId": "pilot.msl_8df4bf74230d40bcba21b87d364f57d8",
+      "name": "Rook",
+      "fullName": "Gideon Vance",
+      "role": "Vehicle crew · Dice Transit Security",
+      "description": "Gideon “Rook” Vance served as an IFV driver before deserting the military under circumstances he refuses to discuss. He eventually found work with Dice Transit Security, driving armored transports and guarding high-value cargo across the lawless routes of Dice of Gods.\r\n\r\nA capable fighter and an experienced combat driver, Vance is dependable under fire but has little interest in leading others or playing the hero. He keeps conversations short, follows orders precisely, and treats every job like another military operation.",
+      "portrait": "portraits/8df4bf74230d40bcba21b87d364f57d8.png",
+      "attributes": {
+        "agility": 65,
+        "weapon_skill": 60,
+        "valour": 75,
+        "toughness": 55,
+        "vitality": 55,
+        "precision": 48,
+        "positioning": 82
+      },
+      "package": {
+        "path": "packages/8df4bf74230d40bcba21b87d364f57d8.zip",
+        "sha256": "e1b1dea6e1cce1aad65a241428bc3d35ad3d384bf6f995cb6e5e08f929538293",
+        "size": 7000487
+      }
+    },
+    {
+      "id": "9f16182f-ba25-4511-b975-15bb52b0fd6b",
+      "leaderId": "pilot.msl_9f16182fba254511b97515bb52b0fd6b",
+      "name": "Track",
+      "fullName": "Darius Keller",
+      "role": "Vehicle crew · 3rd Armored Strike Corps",
+      "description": "Darius Keller is a career tanker of the 3rd Armored Strike Corps, with years of experience operating combat vehicles in difficult conditions. He is a capable soldier, but truly excels once inside a tank, where his steady hands and practiced instincts make him far more dangerous.\n\nKeller is disciplined and reliable, though not especially adaptable. He learns slowly, trusts experience over improvisation, and speaks only when necessary. To him, a tank is simpler than people—and usually more dependable.",
+      "portrait": "portraits/9f16182fba254511b97515bb52b0fd6b.png",
+      "attributes": {
+        "agility": 70,
+        "weapon_skill": 77,
+        "valour": 55,
+        "toughness": 63,
+        "vitality": 64,
+        "precision": 12,
+        "positioning": 78
+      },
+      "package": {
+        "path": "packages/9f16182fba254511b97515bb52b0fd6b.zip",
+        "sha256": "a3a695256791962b0d4514f793865e125b28662217651506cbcd553088ffec77",
+        "size": 6360758
+      }
+    },
+    {
+      "id": "08350dd1-24ff-4108-8d09-291cc9305dd2",
+      "leaderId": "squad_leader.msl_08350dd124ff41088d09291cc9305dd2",
+      "name": "Clover",
+      "fullName": "Niamh Kearney",
+      "role": "Infantry · Colonial Defense Volunteers",
+      "description": "Niamh “Clover” Kearney is a sniper with the Colonial Defense Volunteers, a local militia raised to protect settlements and supply routes. Slight and physically fragile, she compensates with exceptional marksmanship, patience, and an uncanny streak of luck.\n\nQuiet and melancholic, Niamh prefers long watches to conversation. Of Irish descent, she often murmurs old poems and rebel songs before difficult shots, carrying fragments of a distant history into every fight.",
+      "portrait": "portraits/08350dd124ff41088d09291cc9305dd2.png",
+      "attributes": {
+        "agility": 74,
+        "weapon_skill": 84,
+        "valour": 61,
+        "toughness": 34,
+        "vitality": 36,
+        "precision": 40,
+        "positioning": 72
+      },
+      "package": {
+        "path": "packages/08350dd124ff41088d09291cc9305dd2.zip",
+        "sha256": "76ed51766ee46bb91e4fffffff025ff1e7d0a93f6f5684255ea2074a6dc83ce3",
+        "size": 7352283
+      }
+    },
+    {
+      "id": "da2c3972-9397-47c7-a48e-e05469a0bc00",
+      "leaderId": "pilot.msl_da2c3972939747c7a48ee05469a0bc00",
+      "name": "Viper",
+      "fullName": "Lin Meiying",
+      "role": "Vehicle crew · Golden Cobra Squadron",
+      "description": "Lin “Viper” Meiying is a combat walker pilot of Chinese descent from the Backbone, a military-industrial power built on discipline, service and sacrifice. In its elite Golden Cobra Squadron, she mastered aggressive maneuvering, urban breakthroughs and precise battlefield control. She remains calm under pressure and exacting at the controls.\n\nProud and openly superior, Meiying trusts discipline and technical mastery over emotion or camaraderie. To her, a well-handled war machine embodies order: obedient, efficient and more dependable than people.",
+      "portrait": "portraits/da2c3972939747c7a48ee05469a0bc00.png",
+      "attributes": {
+        "agility": 82,
+        "weapon_skill": 79,
+        "valour": 70,
+        "toughness": 67,
+        "vitality": 62,
+        "precision": 18,
+        "positioning": 84
+      },
+      "package": {
+        "path": "packages/da2c3972939747c7a48ee05469a0bc00.zip",
+        "sha256": "943676714d8e38cc4a0bd10308e6aa90f7f9c7e163fdb90fcd3a0019a58e687b",
+        "size": 5734196
+      }
+    },
+    {
+      "id": "c83fc34d-e398-4deb-9f4d-38573df27d3c",
+      "leaderId": "squad_leader.msl_c83fc34de3984deb9f4d38573df27d3c",
+      "name": "Voss",
+      "fullName": "Rafe Voss",
+      "role": "Infantry · Independent Mercenary",
+      "description": "Rafe “Voss” Voss was a pirate raider infamous for his obsession with fire and cruelty toward captives. Even his own crew eventually decided he was too dangerous to keep around and abandoned him after a raid. With nowhere else to go, Voss turned mercenary.\n\nWildly unstable and utterly fearless, he charges into combat laughing, shouting, and searching for anything that will burn. Employers tolerate him for one reason: when an area needs to become uninhabitable, Voss is very good at his job.",
+      "portrait": "portraits/c83fc34de3984deb9f4d38573df27d3c.png",
+      "attributes": {
+        "agility": 68,
+        "weapon_skill": 72,
+        "valour": 95,
+        "toughness": 78,
+        "vitality": 75,
+        "precision": 6,
+        "positioning": 42
+      },
+      "package": {
+        "path": "packages/c83fc34de3984deb9f4d38573df27d3c.zip",
+        "sha256": "c01234dcafa2501308656e7d5ff99ff4145d81dfdce1657c1b2bf87072503e23",
+        "size": 9401899
+      }
+    },
+    {
+      "id": "8202efa1-1019-4595-aadf-bb807d309ace",
+      "leaderId": "squad_leader.msl_8202efa110194595aadfbb807d309ace",
+      "name": "Null",
+      "fullName": "Silas Vane",
+      "role": "Infantry · The Pale Corsairs",
+      "description": "Silas “Null” Vane was an enforcer with the Pale Corsairs, feared less for cruelty than for his complete lack of emotion. Precise, patient, and utterly fearless, he treats killing as routine work.\n\nWhen he decided the Corsairs had cheated him of his share, Vane did not argue. He methodically hunted down and killed every member of his crew, took what he believed he was owed, and walked away. Now a mercenary, he offers the same cold professionalism to anyone willing to pay.",
+      "portrait": "portraits/8202efa110194595aadfbb807d309ace.png",
+      "attributes": {
+        "agility": 78,
+        "weapon_skill": 88,
+        "valour": 96,
+        "toughness": 82,
+        "vitality": 74,
+        "precision": 24,
+        "positioning": 76
+      },
+      "package": {
+        "path": "packages/8202efa110194595aadfbb807d309ace.zip",
+        "sha256": "88a8e622b0641dfce32c4007cd01e61d46919ac17636863ded7113b799943787",
+        "size": 12691193
+      }
+    },
+    {
+      "id": "b1c90e8a-2eb0-4ec2-9ba3-f7f02b513028",
+      "leaderId": "squad_leader.msl_b1c90e8a2eb04ec29ba3f7f02b513028",
+      "name": "Sigrid",
+      "fullName": "Sigrid Falk",
+      "role": "Infantry · 8th “Viking” Infantry Coy",
+      "description": "Sigrid Falk was a combat medic and infantry sergeant of the 8th “Viking” Infantry Coy, a Rogue Army formation known through Wayback for brutal assaults and stubborn defensive stands. \r\n\nFalk is harsh, decisive, and difficult to intimidate. Her combat skills are above average, her medical instincts are excellent, and she has little patience for hesitation. ",
+      "portrait": "portraits/b1c90e8a2eb04ec29ba3f7f02b513028.png",
+      "attributes": {
+        "agility": 70,
+        "weapon_skill": 72,
+        "valour": 80,
+        "toughness": 68,
+        "vitality": 62,
+        "precision": 5,
+        "positioning": 64
+      },
+      "package": {
+        "path": "packages/b1c90e8a2eb04ec29ba3f7f02b513028.zip",
+        "sha256": "9c9574abd06417e0467680b1c3ebcf08e3f1a03c966cda7905190c9f9e91d824",
+        "size": 11719626
+      }
+    },
+    {
+      "id": "b90067c1-fbc3-4676-ad6a-3d8d0c634ac1",
+      "leaderId": "squad_leader.msl_b90067c1fbc34676ad6a3d8d0c634ac1",
+      "name": "Lynx",
+      "fullName": "Mikhail Orlov",
+      "role": "Infantry · 13th Reconnaissance Company",
+      "description": "Mikhail “Lynx” Orlov is a reconnaissance specialist of the 13th Reconnaissance Company, a Rogue Army unit trained for infiltration, night operations, and sabotage. He excels at camouflage, silent movement, forward observation, and striking from concealment.\r\n\nQuiet and methodical, Orlov prefers patience to heroics and rarely wastes words. ",
+      "portrait": "portraits/b90067c1fbc34676ad6a3d8d0c634ac1.png",
+      "attributes": {
+        "agility": 88,
+        "weapon_skill": 82,
+        "valour": 72,
+        "toughness": 58,
+        "vitality": 56,
+        "precision": 12,
+        "positioning": 84
+      },
+      "package": {
+        "path": "packages/b90067c1fbc34676ad6a3d8d0c634ac1.zip",
+        "sha256": "31db9d653714282ff3ff56453ecf5aad15a7433403fd165e298b64c2d5cafa4d",
+        "size": 12990043
+      }
+    },
+    {
+      "id": "e7193a5a-4b8d-4275-86aa-158ec02be9bd",
+      "leaderId": "squad_leader.msl_e7193a5a4b8d427586aa158ec02be9bd",
+      "name": "Marcus",
+      "fullName": "Marcus Hale",
+      "role": "Infantry · 27th Colonial Tactical Response Unit",
+      "description": "Marcus Hale spent years with the CTRU in Colonial Police, handling armed raids, hostage incidents, and high-risk arrests. His CQB instincts, weapon handling, and room-clearing skills are excellent, and he knows it.\r\n\nHale left police service for better-paying mercenary work, but brought the attitude with him. He learns poorly from others, dislikes criticism, and firmly believes that if anyone needs instruction, it is everyone around him.",
+      "portrait": "portraits/e7193a5a4b8d427586aa158ec02be9bd.png",
+      "attributes": {
+        "agility": 79,
+        "weapon_skill": 84,
+        "valour": 67,
+        "toughness": 69,
+        "vitality": 65,
+        "precision": 8,
+        "positioning": 82
+      },
+      "package": {
+        "path": "packages/e7193a5a4b8d427586aa158ec02be9bd.zip",
+        "sha256": "f16c53cc97165982350bc3a50e7765bdae90e3fde502e85f8f68e8f1cd080bc0",
+        "size": 7050815
+      }
+    },
+    {
+      "id": "cace80c4-115a-43f2-a01f-5b965ea4afd8",
+      "leaderId": "squad_leader.msl_cace80c4115a43f2a01f5b965ea4afd8",
+      "name": "Talia",
+      "fullName": "Talia Crowe",
+      "role": "Infantry · 11th Infantry Regiment",
+      "description": "Talia served as a sergeant in the 11th Infantry Regiment of Planetary Jingwei Army under Field Marshal Zama. Competent and battle-tested, she was demoted to private after repeated insubordination, erratic behavior, and a habit of openly questioning orders in front of the squad.\r\n\nRather than adjust, Crowe deserted. Now seeking mercenary work, she brings solid infantry experience, quick instincts, and a constant stream of jokes, sarcastic questions, and ironic commentary—especially when someone tells her what to do.",
+      "portrait": "portraits/cace80c4115a43f2a01f5b965ea4afd8.png",
+      "attributes": {
+        "agility": 77,
+        "weapon_skill": 78,
+        "valour": 74,
+        "toughness": 66,
+        "vitality": 64,
+        "precision": 7,
+        "positioning": 71
+      },
+      "package": {
+        "path": "packages/cace80c4115a43f2a01f5b965ea4afd8.zip",
+        "sha256": "a82884d03b9a2a4b336335efc0ca8a3aab1b939c08564d69a2cf4d358e4f7262",
+        "size": 13118121
+      }
+    },
+    {
+      "id": "c9af11ec-38e3-40b9-97dc-655fac5f1d20",
+      "leaderId": "squad_leader.msl_c9af11ec38e340b997dc655fac5f1d20",
+      "name": "Markov",
+      "fullName": "Anton Markov",
+      "role": "Infantry · 4th Free Army Battalion",
+      "description": "Anton Markov served as a machine gunner in the Free Army, one of the many Rogue Army formations operating across the Wayback. Slow on his feet but steady under fire, he built a reputation for disciplined bursts, reliable suppression, and keeping his weapon running when everyone else was moving.\r\n\nMarkov is competent, practical, and unhurried. He learns at an average pace and rarely does anything flashy, but when a squad needs sustained fire and someone dependable behind the gun, he is exactly where he should be.",
+      "portrait": "portraits/c9af11ec38e340b997dc655fac5f1d20.png",
+      "attributes": {
+        "agility": 46,
+        "weapon_skill": 80,
+        "valour": 77,
+        "toughness": 76,
+        "vitality": 72,
+        "precision": 5,
+        "positioning": 72
+      },
+      "package": {
+        "path": "packages/c9af11ec38e340b997dc655fac5f1d20.zip",
+        "sha256": "cbe1dc8d8415d6d30e7c00e5996f64ab4d2d15a14350d2d7d0b7a306d15c8cc7",
+        "size": 7945828
+      }
+    },
+    {
+      "id": "2385cdca-62c0-4bc3-a0f8-efd59ed87590",
+      "leaderId": "squad_leader.msl_2385cdca62c04bc3a0f8efd59ed87590",
+      "name": "Luo",
+      "fullName": "Jian Luo",
+      "role": "Infantry · TCRN Impetus Provisional Platoon",
+      "description": "Jian Luo rose to junior officer rank in the Backbone Army before realizing his career had reached its ceiling. Hearing that the TCRN Impetus was short of personnel, he applied to the Marines and, after some hesitation, was accepted as a Lance Corporal.\r\n\nLuo is a competent but unexceptional soldier with average potential. Calm and disciplined, he follows orders precisely but rarely shows initiative, preferring clear instructions to improvisation.",
+      "portrait": "portraits/2385cdca62c04bc3a0f8efd59ed87590.png",
+      "attributes": {
+        "agility": 65,
+        "weapon_skill": 66,
+        "valour": 57,
+        "toughness": 61,
+        "vitality": 63,
+        "precision": 4,
+        "positioning": 67
+      },
+      "package": {
+        "path": "packages/2385cdca62c04bc3a0f8efd59ed87590.zip",
+        "sha256": "cfc72188859e148196d58895f51bb85c69a243a8761c39493d8084c0f7fa83ff",
+        "size": 6924106
+      }
+    },
+    {
+      "id": "89018164-c18b-4d71-a468-fe4011626c7a",
+      "leaderId": "squad_leader.msl_89018164c18b4d71a468fe4011626c7a",
+      "name": "Darius",
+      "fullName": "Darius Cole",
+      "role": "Infantry · Red Banner Corsairs",
+      "description": "Darius Cole serves as a heavy gunner for the Red Banner Corsairs, a pirate crew known for hard boarding actions and brutal close-range raids. He earned his place by being the man sent through the breach first and the one still standing after the smoke cleared.\r\n\nCalm and intimidating, Cole is not a loud or theatrical pirate. He is a professional raider who trusts armor, firepower, and fear to do most of the work, making him a reliable enforcer in any violent job.",
+      "portrait": "portraits/89018164c18b4d71a468fe4011626c7a.png",
+      "attributes": {
+        "agility": 54,
+        "weapon_skill": 82,
+        "valour": 86,
+        "toughness": 84,
+        "vitality": 80,
+        "precision": 8,
+        "positioning": 66
+      },
+      "package": {
+        "path": "packages/89018164c18b4d71a468fe4011626c7a.zip",
+        "sha256": "e4fe2f22b762429b756501be2d0cf44427e3f1436a07f3f7d5255c3c3b588456",
+        "size": 7177344
+      }
+    },
+    {
+      "id": "9d387543-5701-4232-8cef-fe799e14348a",
+      "leaderId": "squad_leader.msl_9d387543570142328ceffe799e14348a",
+      "name": "Don",
+      "fullName": "Don Mercer",
+      "role": "Infantry · Zayn-Beecher Security",
+      "description": "Don Mercer worked as an operative for Zayn-Beecher Security, guarding facilities and personnel, escorting convoys, and handling problems that required armed support. He was never exceptional in any one field, but his steady competence made him useful across a wide range of assignments.\r\n\nAfter leaving corporate service, Mercer turned mercenary. He brings solid security training, practical judgment, and broad operational experience, without the ambition or specialist edge of a true elite operator.",
+      "portrait": "portraits/9d387543570142328ceffe799e14348a.png",
+      "attributes": {
+        "agility": 64,
+        "weapon_skill": 68,
+        "valour": 63,
+        "toughness": 65,
+        "vitality": 62,
+        "precision": 5,
+        "positioning": 67
+      },
+      "package": {
+        "path": "packages/9d387543570142328ceffe799e14348a.zip",
+        "sha256": "0145cc54a881b08a9947688ba0808070acb1e927e0dacc0bc6b1741c1aa63be1",
+        "size": 8071573
+      }
+    },
+    {
+      "id": "0942d985-d5e9-4d93-afce-33fe3c3b96c5",
+      "leaderId": "squad_leader.msl_0942d985d5e94d93afce33fe3c3b96c5",
+      "name": "Caleb",
+      "fullName": "Caleb Verran",
+      "role": "Infantry · Planetary Defense Force",
+      "description": "Caleb Verran is a career infantryman of the Planetary Defense Force, trained to protect settlements, infrastructure, and strategic sites from raids or invasion. Most of his service was spent on garrison duty, patrols, and defensive exercises rather than offensive campaigns.\r\n\nVerran is a steady, competent soldier who trusts preparation, cover, and discipline more than heroics. He is not exceptional, but he is dependable—the kind of man expected to hold his position when everyone else is looking for a way out.",
+      "portrait": "portraits/0942d985d5e94d93afce33fe3c3b96c5.png",
+      "attributes": {
+        "agility": 59,
+        "weapon_skill": 71,
+        "valour": 79,
+        "toughness": 73,
+        "vitality": 69,
+        "precision": 5,
+        "positioning": 79
+      },
+      "package": {
+        "path": "packages/0942d985d5e94d93afce33fe3c3b96c5.zip",
+        "sha256": "df941ad6e65bac9c9dc51742b0646476ffdb265d5784e263dd2f8a00b3ce7e97",
+        "size": 8146667
+      }
+    },
+    {
+      "id": "09412993-3e2d-4fe0-9189-8163b4adc6e0",
+      "leaderId": "squad_leader.msl_094129933e2d4fe091898163b4adc6e0",
+      "name": "Creed",
+      "fullName": "Jonas Creed",
+      "role": "Infantry · TCRN Impetus Provisional Platoon",
+      "description": "Jonas Creed inherited an old Marine uniform from an ancestor, along with generations of drills, fieldcraft, and military tradition. He has worn it while serving with more than a dozen militias, security outfits, and armed groups across Wayback.\r\n\nWhen the TCRN Impetus arrived, Creed immediately volunteered for its provisional platoon—and refused to exchange the family uniform. He is experienced, steady, and highly competent, though age is beginning to slow the reflexes that once kept pace with younger soldiers.",
+      "portrait": "portraits/094129933e2d4fe091898163b4adc6e0.png",
+      "attributes": {
+        "agility": 51,
+        "weapon_skill": 83,
+        "valour": 86,
+        "toughness": 77,
+        "vitality": 66,
+        "precision": 8,
+        "positioning": 84
+      },
+      "package": {
+        "path": "packages/094129933e2d4fe091898163b4adc6e0.zip",
+        "sha256": "394605a18edb9bc853234174f2c3fbda6da1cf5641c39ce4ea1b741128465f6f",
+        "size": 9344998
+      }
+    },
+    {
+      "id": "4ac8e836-448c-476e-b5fd-34481875fb6f",
+      "leaderId": "squad_leader.msl_4ac8e836448c476eb5fd34481875fb6f",
+      "name": "Camila",
+      "fullName": "Camila Reyes",
+      "role": "Infantry · Serrano Dynamics PSC",
+      "description": "Camila “Payday” Reyes is a contract sniper who has worked security jobs, private wars, and bounty contracts across the colonies. Patient and highly professional, she prefers distance, preparation, and a clean firing position over unnecessary heroics.\r\n\nReyes has no interest in causes or flags. For her, warfare is simply another market: name the target, agree on the fee, and pay on time. Once the contract is signed, however, she takes professional pride in finishing the job.",
+      "portrait": "portraits/4ac8e836448c476eb5fd34481875fb6f.png",
+      "attributes": {
+        "agility": 74,
+        "weapon_skill": 86,
+        "valour": 68,
+        "toughness": 49,
+        "vitality": 54,
+        "precision": 32,
+        "positioning": 83
+      },
+      "package": {
+        "path": "packages/4ac8e836448c476eb5fd34481875fb6f.zip",
+        "sha256": "8966979e8a04f9a4f02bfa23cfd5f53a08322d35894d14b637a966c97794f6da",
+        "size": 7778871
+      }
+    },
+    {
+      "id": "3db58766-f049-4dc2-947a-430a808e9cbf",
+      "leaderId": "squad_leader.msl_3db58766f0494dc2947a430a808e9cbf",
+      "name": "Vale",
+      "fullName": "Ronan Vale",
+      "role": "Infantry · Dust Reavers",
+      "description": "Ronan Vale spent years raiding settlements and convoys with the Dust Reavers, learning ambushes, scavenging, and irregular warfare the hard way. When the gang was finally wiped out, Vale survived by knowing when not to fight.\r\n\nWith no crew left, he turned mercenary and began selling the same experience once used against organized forces. He is neither proud nor ashamed of his past; to Vale, survival is simply another skill, and now someone else is paying for it.",
+      "portrait": "portraits/3db58766f0494dc2947a430a808e9cbf.png",
+      "attributes": {
+        "agility": 82,
+        "weapon_skill": 64,
+        "valour": 28,
+        "toughness": 54,
+        "vitality": 58,
+        "precision": 4,
+        "positioning": 76
+      },
+      "package": {
+        "path": "packages/3db58766f0494dc2947a430a808e9cbf.zip",
+        "sha256": "f8b9b17fade6edf9923f32d98585891cccfa05fd1b098cf41ca8b4791757f841",
+        "size": 7730387
+      }
+    }
+  ]
+}
