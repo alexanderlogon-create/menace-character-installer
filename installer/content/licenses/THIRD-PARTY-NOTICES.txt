@@ -1,4 +1,4 @@
-MENACE Character Installer 0.3.1 preview
+MENACE Character Installer 0.3.2 preview
 
 Waybackers content: AlexLogon, distributed as part of this installer by the pack author.
 Source release: Realistic Looking Squadleader - Waybackers 1.0.1.
@@ -37,8 +37,8 @@ https://github.com/StbSharp/StbImageWriteSharp
 Imported character content belongs to the original pack authors; the application
 does not transmit, redistribute online or change ownership of imported files.
 
-All Leaders Pickable is not bundled or automatically downloaded. It is not required
-by the built-in selection pack. A declared dependency in an imported pack is shown
+All Leaders Pickable is not bundled or automatically downloaded. It is required
+by the built-in Waybackers selection pack. A dependency in an imported pack is shown
 with a Nexus website link and an Install action for its locally downloaded archive.
 Custom Leaders is also obtained through Nexus and is not bundled in this application.
 MENACE and its trademarks belong to their respective owners. This is an unofficial tool.

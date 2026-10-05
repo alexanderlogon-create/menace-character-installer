@@ -1,6 +1,6 @@
 # MENACE Character Installer
 
-Source snapshot of **Windows x64 preview 0.3.1**, published by AlexLogon for review of the optional installer on [Waybackers — Nexus Mods](https://www.nexusmods.com/menace/mods/262).
+Source snapshot of **Windows x64 preview 0.3.2**, published by AlexLogon for review of the optional installer on [Waybackers — Nexus Mods](https://www.nexusmods.com/menace/mods/262).
 
 The installer previews the 22 bundled Waybackers squad leaders, lets the user select a subset, checks prerequisites, and installs that selection into a chosen MENACE folder. It also imports supported Jiangyu and Custom Leaders character-pack ZIPs. The interface supports Russian and English.
 
@@ -48,9 +48,20 @@ This publishes a self-contained .NET 10 WPF application. The game-side MelonLoad
 - Installs character files into the selected game folder, preserves backups and offers rollback. Changing a selection can remove previously installed members of that same pack; keep existing campaign characters selected.
 - Does not request Nexus credentials or send telemetry.
 
-The embedded `THIRD-PARTY-NOTICES.txt` in this exact release snapshot has a stale sentence saying All Leaders Pickable is not required for the built-in pack. The shipped `catalog.json` and application enforce the requirement. The resource snapshot is retained here unchanged so reviewers can inspect the content of 0.3.1.
+## Release 0.3.2
 
-## Release identification
+Fixes candidate-pool registration: selected infantry leaders and pilots are appended to the appropriate dossier pools. Shared dossier registrations no longer link all imported characters into a mandatory selection group. Native recruitment on the local game could not be retested because the game exited before Unity startup, including with mods disabled.
+
+Automated verification: 56 pack assembly/rollback checks, 7 archive-import/recruitment checks, 28 dependency checks; shipped EXE content verification confirms 22 characters and 22 portraits.
+
+Build the current main branch or tag v0.3.2 with the command above. The original v0.3.1 tag remains available for the earlier Nexus review.
+
+| Artifact | SHA-256 |
+| --- | --- |
+| MENACE-Character-Installer-0.3.2-win-x64.zip | B3E86611ECB6B968DD9BF143EF66807C88A9F2F3F2EBF72B4184ABE79E8F8FD6 |
+| EXE inside that ZIP | 16B06D1BAB2E2FA73E45C1493FAAB1C872A47A600C06F4CCEDA4081BAAC83A11 |
+
+## Previous release 0.3.1
 
 Nexus optional file: **MENACE Character Installer - Windows x64 Preview**, version **0.3.1**, file ID **1091**.
 
@@ -59,7 +70,7 @@ Nexus optional file: **MENACE Character Installer - Windows x64 Preview**, versi
 | `MENACE-Character-Installer-0.3.1-win-x64.zip` | `D7522B609CEA7DFD47F9778F9CF29D2FD6303969BEA3031462C4612C5AF96912` |
 | EXE inside that ZIP | `941E9A95DDAD4BB0990CB4068701B1E51675AC27D8DE747D7C390305CC135F34` |
 
-This source contains the application code and embedded payload used for that release. Compiler, SDK and build-path differences can change a rebuilt executable's hash. The listed hashes identify the uploaded artifacts, not a promise of byte-identical builds.
+The v0.3.1 tag contains the application code and embedded payload used for that previous release. Compiler, SDK and build-path differences can change a rebuilt executable's hash. The listed hashes identify the uploaded artifacts, not a promise of byte-identical builds.
 
 Nexus quarantined the optional executable archive for review. Its specific automated detection reason is not known. This repository provides source and build instructions for that review; the quarantined binary is left on Nexus for staff inspection.
 

@@ -141,6 +141,26 @@ public sealed class PackAssembler(Catalog catalog, ContentStore content)
         }
         var actual=clones.Where(c=>c!["templateType"]!.GetValue<string>()=="UnitLeaderTemplate").Select(c=>c!["cloneId"]!.GetValue<string>()).ToHashSet();
         if(!actual.SetEquals(selected.Where(c=>c.IsClone).Select(c=>c.LeaderId)))throw new InvalidDataException("Selected roster differs from installed templates");
+        // Older character archives omit dossier pools. Register only selected clones,
+        // preserving explicit registrations and every existing vanilla candidate.
+        var registered=patches.Where(p=>p!["templateType"]!.GetValue<string>()=="DossierItemTemplate")
+            .SelectMany(p=>p!["set"]!.AsArray()).Where(o=>o?["fieldPath"]?.GetValue<string>()=="m_UnlockedLeaders"&&o?["value"]?["kind"]?.GetValue<string>()=="TemplateReference")
+            .Select(o=>o!["value"]!["reference"]!["templateId"]!.GetValue<string>()).ToHashSet();
+        foreach(var leader in clones.Where(c=>c!["templateType"]!.GetValue<string>()=="UnitLeaderTemplate"))
+        {
+            var id=leader!["cloneId"]!.GetValue<string>();var source=leader["sourceId"]!.GetValue<string>();
+            var dossier=source.StartsWith("squad_leader.")?"dossier.squad_leader":source.StartsWith("pilot.")?"dossier.pilot":null;
+            if(dossier is null||!registered.Add(id))continue;
+            patches.Add(new JsonObject{["templateType"]="DossierItemTemplate",["templateId"]=dossier,["set"]=new JsonArray(new JsonObject{
+                ["op"]="Append",["fieldPath"]="m_UnlockedLeaders",["value"]=new JsonObject{["kind"]="TemplateReference",["reference"]=new JsonObject{["templateType"]="UnitLeaderTemplate",["templateId"]=id}}
+            })});
+        }
+        foreach(var group in patches.Where(p=>p!["templateType"]!.GetValue<string>()=="DossierItemTemplate").GroupBy(p=>p!["templateId"]!.GetValue<string>()).Where(g=>g.Count()>1).ToArray())
+        {
+            var merged=new JsonArray(group.SelectMany(p=>p!["set"]!.AsArray()).Select(o=>o!.DeepClone()).ToArray());
+            var first=group.First()!;first["set"]=merged;
+            foreach(var duplicate in group.Skip(1).ToArray())patches.Remove(duplicate);
+        }
         // Append only this selection; retain vanilla starters and the number the player can choose.
         if(selected.Any(c=>c.IsClone))patches.Add(new JsonObject { ["templateType"]="StrategyConfig",["templateId"]="strategy_config",["set"]=new JsonArray(selected.Where(c=>c.IsClone).Select(c=>(JsonNode)new JsonObject{
             ["op"]="Append",["fieldPath"]="InitialPickableUnitLeaders",["value"]=new JsonObject{

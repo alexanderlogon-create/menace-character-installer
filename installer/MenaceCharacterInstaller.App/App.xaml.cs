@@ -25,7 +25,7 @@ public partial class App : Application
                 var catalog=Data.Read<Catalog>(Path.Combine(root,"catalog.json"));
                 foreach(var file in new[]{catalog.Shared}.Concat(catalog.Characters.Select(c=>c.Package)))
                     if(!Data.Hash(Data.Inside(root,file.Path)).Equals(file.Sha256,StringComparison.OrdinalIgnoreCase))throw new InvalidDataException(file.Path);
-                Data.Write(Path.Combine(root,"verification.json"),new{version="0.3.1",characters=catalog.Characters.Count,portraits=catalog.Characters.Count(c=>File.Exists(Data.Inside(root,c.Portrait))),languages=Localize.Strings.Count});
+                Data.Write(Path.Combine(root,"verification.json"),new{version="0.3.2",characters=catalog.Characters.Count,portraits=catalog.Characters.Count(c=>File.Exists(Data.Inside(root,c.Portrait))),languages=Localize.Strings.Count});
                 Shutdown(0);
             }
             catch(Exception ex){File.WriteAllText(Path.Combine(Path.GetTempPath(),"mci-verify-error.txt"),ex.ToString());Shutdown(1);}

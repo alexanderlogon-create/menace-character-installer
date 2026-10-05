@@ -70,6 +70,26 @@ public static class PackImport
         if(mf["textureReplacements"]?.AsArray().Count>0 || mf["meshes"]?.AsObject().Count>0)throw new InvalidDataException("This pack contains global mesh/texture replacements that cannot be assigned safely to individual characters.");
         var defs=JsonNode.Parse(File.ReadAllText(Path.Combine(source,"templates.json")))!;
         var clones=defs["templateClones"]!.AsArray().Select(n=>n!).ToArray();var patches=defs["templatePatches"]!.AsArray().Select(n=>n!).ToArray();
+        // A dossier is a candidate pool, not a dependency requiring the whole roster.
+        // Separate only direct Append operations owned by a cloned leader; retain all other edits.
+        var clonedLeaders=clones.Where(n=>S(n,"templateType")=="UnitLeaderTemplate").Select(n=>S(n,"cloneId")).ToHashSet();
+        var recruitment=new Dictionary<string,List<JsonNode>>();
+        foreach(var patch in patches.Where(n=>S(n,"templateType")=="DossierItemTemplate"))
+        {
+            var remainder=new List<JsonNode>();
+            foreach(var op in Ops(patch))
+            {
+                var reference=op["value"]?["reference"];
+                var id=S(reference,"templateId");
+                if(S(op,"op")=="Append"&&S(op,"fieldPath")=="m_UnlockedLeaders"&&S(op["value"],"kind")=="TemplateReference"&&S(reference,"templateType")=="UnitLeaderTemplate"&&clonedLeaders.Contains(id))
+                {
+                    if(!recruitment.TryGetValue(id,out var owned))recruitment[id]=owned=[];
+                    owned.Add(new JsonObject{["templateType"]="DossierItemTemplate",["templateId"]=S(patch,"templateId"),["set"]=new JsonArray(op.DeepClone())});
+                }
+                else remainder.Add(op.DeepClone());
+            }
+            patch["set"]=new JsonArray(remainder.ToArray());
+        }
         string Key(JsonNode n,bool clone=false)=>S(n,"templateType")+"|"+S(n,clone?"cloneId":"templateId");
         var nodes=clones.Concat(patches).GroupBy(n=>Key(n,n["cloneId"] is not null)).ToDictionary(g=>g.Key,g=>g.ToArray());
         var leaders=nodes.Keys.Where(k=>k.StartsWith("UnitLeaderTemplate|",StringComparison.Ordinal)).ToArray();
@@ -106,6 +126,9 @@ public static class PackImport
             if(!componentPackages.TryGetValue(groupId,out var package))
             {
                 var templates=new JsonObject{["templateClones"]=new JsonArray(clones.Where(n=>component.Contains(Key(n,true))).Select(n=>n.DeepClone()).ToArray()),["templatePatches"]=new JsonArray(patches.Where(n=>component.Contains(Key(n))).Select(n=>n.DeepClone()).ToArray())};
+                foreach(var member in group)
+                    if(recruitment.TryGetValue(member.Split('|',2)[1],out var registrations))
+                        foreach(var registration in registrations)templates["templatePatches"]!.AsArray().Add(registration.DeepClone());
                 package=Zip(root,groupId,[],new(){{"templates.json",templates}});componentPackages[groupId]=package;
             }
             var lp=patches.FirstOrDefault(n=>Key(n)==leader);var speakerRef=Ops(lp).FirstOrDefault(n=>S(n,"fieldPath")=="SpeakerTemplate")?["value"]?["reference"];
